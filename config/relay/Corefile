@@ -1,0 +1,54 @@
+. {
+    hosts {
+        # --- بازی‌ها و استورها ---
+        EXIT_IP_HERE xboxlive.com
+        EXIT_IP_HERE xbox.com
+        EXIT_IP_HERE playstation.com
+        EXIT_IP_HERE playstation.net
+        EXIT_IP_HERE playstationnetwork.com
+        EXIT_IP_HERE steampowered.com
+        EXIT_IP_HERE steamcommunity.com
+        EXIT_IP_HERE epicgames.com
+        EXIT_IP_HERE ea.com
+        EXIT_IP_HERE origin.com
+        EXIT_IP_HERE ubisoft.com
+        EXIT_IP_HERE uplay.com
+        EXIT_IP_HERE battle.net
+        EXIT_IP_HERE blizzard.com
+        EXIT_IP_HERE riotgames.com
+
+        # --- بازی‌های خاص (پابجی، کالاف و...) ---
+        EXIT_IP_HERE pubgmobile.com
+        EXIT_IP_HERE proximabeta.com
+        EXIT_IP_HERE callofduty.com
+        EXIT_IP_HERE activision.com
+        EXIT_IP_HERE garena.com
+
+        # --- دیسکورد و ارتباطات ---
+        EXIT_IP_HERE discord.com
+        EXIT_IP_HERE discord.gg
+        EXIT_IP_HERE discordapp.com
+        EXIT_IP_HERE discordapp.net
+
+        # --- سرویس‌های هوش مصنوعی و وب تحریمی ---
+        EXIT_IP_HERE openai.com
+        EXIT_IP_HERE chatgpt.com
+        EXIT_IP_HERE anthropic.com
+        EXIT_IP_HERE claude.ai
+        EXIT_IP_HERE docker.com
+        EXIT_IP_HERE docker.io
+        EXIT_IP_HERE firebase.google.com
+        EXIT_IP_HERE developer.android.com
+        EXIT_IP_HERE nvidia.com
+        EXIT_IP_HERE amd.com
+        EXIT_IP_HERE intel.com
+        EXIT_IP_HERE oracle.com
+        EXIT_IP_HERE spotify.com
+
+        fallthrough
+    }
+    forward . 1.1.1.1 8.8.8.8 {
+        expire 10s
+    }
+    cache 3600
+}

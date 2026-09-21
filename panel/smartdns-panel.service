@@ -1,0 +1,10 @@
+[Unit]
+Description=SmartDNS Admin Panel
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /etc/smartdns/core/app.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
